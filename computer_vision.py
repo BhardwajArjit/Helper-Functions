@@ -19,3 +19,16 @@ def translate(img, x, y):
     dimensions = (img.shape[1], img.shape[0])
 
     return cv.warpAffine(img, translation, dimensions)
+
+def rotate(img, angle, rotation_point):
+    """Rotate the image by an angle around the rotation point"""
+
+    (height, width) = img.shape[:2]
+
+    if rotation_point is None:
+        rotation_point = (width // 2, height // 2)
+
+    rotation_mat = cv.getRotationMatrix2D(rotation_point, angle, 1)
+    dimensions = (width, height)
+
+    return cv.warpAffine(img, rotation_mat, dimensions)
