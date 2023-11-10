@@ -1,6 +1,4 @@
 """
-A series of helper functions used throughout the course.
-
 If a function gets defined once and could be used over and over, it'll go in here.
 """
 import torch
@@ -164,8 +162,7 @@ def plot_loss_curves(results):
     plt.legend()
 
 
-# Pred and plot image function from notebook 04
-# See creation: https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function
+# Pred and plot image function
 from typing import List
 import torchvision
 
